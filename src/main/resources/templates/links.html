@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="template.css" />
+<title>Links</title>
+</head>
+<body>
+	<nav id="menu">
+    <ul>
+        <li><a th:href="@{/home}">Home</a></li>
+        <li><a th:href="@{/about}">Sobre</a></li>
+        <li><a th:href="@{/missao}">Missão</a></li>
+        <li><a th:href="@{/links}">Links</a></li>
+        <li><a th:href="@{/contatos}">Contato</a></li>
+    </ul>
+    
+    <h1 class="logo-nome">Hilma Barreto</h1>
+    <h2 class="logo-formacao">Psicóloga e Psicopedagoga</h2>
+    <h2 th:text="#{crp}"></h2>	
+    
+    <h3>Site: <a href="https://psicologahilmabarreto.negocio.site/" 
+    	th:text="#{site}" target="blank"></a></h3>
+    <h3>Facebook: <a href="https://www.facebook.com/psicologahilmabarreto/" 
+    	th:text="#{facebook}" target="blank"></a></h3>
+</nav>
+</body>
+</html>

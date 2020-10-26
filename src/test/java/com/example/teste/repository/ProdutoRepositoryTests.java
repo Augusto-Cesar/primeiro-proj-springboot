@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.teste.domain.Categoria;
 import com.example.teste.domain.Produto;
 
 @SpringBootTest
@@ -18,21 +19,21 @@ public class ProdutoRepositoryTests {
 	public void inserir() {
 		Produto p1 = new Produto(
 				null, 
-				"agua", 
+				"Biscoto Maria", 
 				Byte.valueOf("10"), 
-				BigDecimal.valueOf(10.50), 
+				BigDecimal.valueOf(2.50), 
 				LocalDate.of(2023, 10, 20),
 				true, 
-				null);
+				new Categoria((short) 5, "massas"));
 		
 		Produto p2 = new Produto(
 				null, 
-				"suco", 
-				Byte.valueOf("13"), 
-				BigDecimal.valueOf(12.50), 
+				"Biscoito Maizena", 
+				Byte.valueOf("20"), 
+				BigDecimal.valueOf(2.25), 
 				LocalDate.of(2023, 10, 20),
 				true,
-				null);
+				new Categoria((short) 5, "massas"));
 		
 		produtoRepository.save(p1);
 		produtoRepository.save(p2);
